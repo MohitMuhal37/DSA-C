@@ -17,8 +17,9 @@ void main()
         else{
             c[k++] = b[j++];
         }
+    }
 
-        // for remaining last element
+       // for remaining last element
         for(; i < 5; i++)
         {
             c[k++] = a[i];
@@ -32,6 +33,5 @@ void main()
         for(int k = 0; k < 10; k++)
     {
         printf("%d ",c[k]);
-    }
     }
 }
