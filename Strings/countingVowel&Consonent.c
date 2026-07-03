@@ -15,6 +15,6 @@ void main()
             cconst++;
         }
     }
-    printf("Vowels are = %d ",vowel);
+    printf("Vowels are = %d \n",vowel);
     printf("Constants are = %d ",cconst);
 }
