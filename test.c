@@ -9,7 +9,5 @@ struct abc
 
 int main()
 {
-  struct abc var;
-  printf("%d ",sizeof(var));
-  printf("%d ",sizeof(var));
+ printf("hello");
 }
