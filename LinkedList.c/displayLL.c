@@ -38,8 +38,8 @@ void revRecDisp(struct node *p)
 {
     if(p != NULL)
     {
+        revRecDisp(p->next);
         printf("%d ", p->data);
-        recDisp(p->next);
     }
 }
 
