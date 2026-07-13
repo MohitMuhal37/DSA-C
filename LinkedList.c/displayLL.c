@@ -34,10 +34,18 @@ void recDisp(struct node *p)
         recDisp(p->next);
     }
 }
+void revRecDisp(struct node *p)
+{
+    if(p != NULL)
+    {
+        printf("%d ", p->data);
+        recDisp(p->next);
+    }
+}
 
 void main()
 {
     int a[] = {10,32,4,5,67,54};
     create(a,6);
-    recDisp(p);
+    revRecDisp(p);
 }
