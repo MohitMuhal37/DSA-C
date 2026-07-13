@@ -10,33 +10,34 @@ struct node
 void create(int a[], int n)
 {
     int i;
-    struct node *t, *l;
+    struct node *t, *last;
     p = (struct node *)malloc(sizeof(struct node));
     p->data = a[0];
     p->next = NULL;
-    l=p;
+    last = p;
 
     for(i = 1; i < n; i++)
     {
-        t = (struct node *)malloc(sizeof(struct node));
-        t->data = a[i];
-        t->next = NULL;
-        l->next = t;
-        l = t;
+       t = (struct node *)malloc(sizeof(struct node)); 
+       t->data = a[i];
+       t->next = NULL;
+       last->next = t;
+       last = t;
     }
 }
 
-void disp(struct node *p)
+void recDisp(struct node *p)
 {
-    while(p != NULL)
+    if(p != NULL)
     {
-        printf("%d ",p->data);
-        p = p -> next;
+        printf("%d ", p->data);
+        recDisp(p->next);
     }
 }
-int main()
+
+void main()
 {
-    int a[] ={10,20,30,40,50};
+    int a[] = {10,32,4,5,67,54};
     create(a,6);
-    disp(p);
+    recDisp(p);
 }
