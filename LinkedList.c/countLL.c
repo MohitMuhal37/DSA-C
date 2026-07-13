@@ -26,7 +26,30 @@ void create(int a[], int n)
     }
 }
 
-void count(struct node *p)
+int count(struct node *p)
 {
-    
+    int c = 0;
+    while(p != 0)
+    {
+        c++;
+        p = p->next;
+    }
+    return c;
+}
+
+void disp(struct node *p)
+{
+    while(p != NULL)
+    {
+        printf("%d ", p->data);
+        p = p->next;
+    }
+}
+
+void main()
+{
+    int a[] = {89, 54, 76, 90, 32};
+    create(a,5);
+    printf("So count is = %d\n",count(p));
+    // disp(p);
 }
