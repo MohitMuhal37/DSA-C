@@ -51,5 +51,5 @@ void main()
     int a[] = {89, 54, 76, 90, 32};
     create(a,5);
     printf("So count is = %d\n",count(p));
-    // disp(p);
+    disp(p);
 }
