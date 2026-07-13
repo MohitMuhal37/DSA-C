@@ -26,16 +26,16 @@ void create(int a[], int n)
     }
 }
 
-// Count Function
-int count(struct node *p)
+// Sum Function
+int sum(struct node *p)
 {
-    int c = 0;
-    while(p != 0)
+    int sum = 0;
+    while(p != NULL)
     {
-        c++;
-        p = p->next;
+        sum += p->data;
+        p = p -> next;
     }
-    return c;
+    return sum;
 }
 
 void disp(struct node *p)
@@ -49,8 +49,8 @@ void disp(struct node *p)
 
 void main()
 {
-    int a[] = {89, 54, 76, 90, 32};
-    create(a,5);
-    printf("So count is = %d\n",count(p));
+    int a[] = {10, 20};
+    create(a,2);
+    printf("So count is = %d\n",sum(p));
     disp(p);
 }
